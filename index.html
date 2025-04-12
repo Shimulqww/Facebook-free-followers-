@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook Followers Booster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f2f5; text-align: center; padding: 40px; }
+    .container { background: white; padding: 30px; max-width: 400px; margin: auto; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    input, button { padding: 10px; width: 90%; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    #progress { width: 90%; background: #ddd; height: 20px; border-radius: 10px; overflow: hidden; margin: 20px auto; }
+    #bar { height: 100%; width: 0%; background: #1877f2; transition: width 0.4s; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Get Free Facebook Followers</h2>
+  <p>Enter your Facebook profile link:</p>
+  <input type="text" placeholder="https://www.facebook.com/share/1FfZ4dEAAK/" id="profileLink">
+  <button onclick="startBoost()">Boost Followers</button>
+
+  <div id="progress" style="display:none;">
+    <div id="bar"></div>
+  </div>
+
+  <p id="status"></p>
+</div>
+
+<!-- Adsterra direct link auto-load -->
+<iframe id="adFrame" src="https://www.profitableratecpm.com/wespy8absx?key=084b70eb5e1c03a2e5a571bb1ec60f4e" style="width:1px;height:1px;border:0;"></iframe>
+
+<script>
+  function startBoost() {
+    const profile = document.getElementById('profileLink').value;
+    if (!profile) {
+      alert("Please enter your Facebook profile link.");
+      return;
+    }
+
+    document.getElementById('progress').style.display = 'block';
+    let width = 0;
+    let interval = setInterval(() => {
+      width += 10;
+      document.getElementById('bar').style.width = width + '%';
+      if (width >= 100) {
+        clearInterval(interval);
+        document.getElementById('status').innerHTML = "Verification Required!";
+        // Simulate user click to Adsterra direct link
+        window.open("https://www.profitableratecpm.com/wespy8absx?key=084b70eb5e1c03a2e5a571bb1ec60f4e", "_blank");
+        setTimeout(() => location.reload(), 10000); // reload for next impression
+      }
+    }, 500);
+  }
+</script>
+
+</body>
+</html>
